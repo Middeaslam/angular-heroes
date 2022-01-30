@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeroesModule } from './heroes/heroes.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MissionsModule } from './missions/missions.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CoreModule,
     AppRoutingModule,
     HeroesModule,
+    MissionsModule,
     FlexLayoutModule,
     BrowserAnimationsModule
   ],

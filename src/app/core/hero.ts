@@ -1,9 +1,9 @@
+import { Mission } from "./Mission";
+
 export interface Hero {
   id: string;
   name: string;
+  alias: string;
   shortBio: string;
-  age: number;
-  eyes: string;
-  hair: string;
-  powers: string[]
+  missions: Mission[]
 }

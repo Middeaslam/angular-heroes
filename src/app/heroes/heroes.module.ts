@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AppMaterialModule } from '../app-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MissionsModule } from '../missions/missions.module';
 
 
 
@@ -21,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppMaterialModule,
     FlexLayoutModule,
     ReactiveFormsModule,
+    MissionsModule,
     CommonModule
   ]
 })

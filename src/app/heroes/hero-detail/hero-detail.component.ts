@@ -1,5 +1,7 @@
 import { Component, Input, OnChanges, OnInit, Output, SimpleChanges, EventEmitter} from '@angular/core';
-import { Hero } from '../hero';
+import { MatDialog } from '@angular/material/dialog';
+import { MissionComponent } from 'src/app/missions/mission/mission.component';
+import { Hero } from '../../core/hero';
 import { HeroesService } from '../heroes.service';
 
 @Component({
@@ -9,12 +11,12 @@ import { HeroesService } from '../heroes.service';
 })
 export class HeroDetailComponent implements OnChanges {
 
-  @Input() id!: string;
+  @Input() id!: any;
   @Output() delete = new EventEmitter();
 
   hero!: Hero;
 
-  constructor(private heroService: HeroesService) { }
+  constructor(private heroService: HeroesService, private dialog: MatDialog) { }
 
   ngOnChanges(changes: SimpleChanges): void {
       this.getHero();
@@ -26,6 +28,10 @@ export class HeroDetailComponent implements OnChanges {
 
   deleteHero() {
     this.heroService.deleteHero(this.hero.id).subscribe(() => this.delete.emit())
+  }
+
+  assignMission() {
+    this.dialog.open(MissionComponent, {data: this.hero})
   }
 
 }

@@ -8,6 +8,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   imports: [
@@ -19,7 +22,10 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatGridListModule,
     MatInputModule,
     MatSidenavModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSelectModule,
+    MatDialogModule,
+    MatListModule
   ],
   exports: [
     MatButtonModule,
@@ -30,7 +36,10 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatGridListModule,
     MatInputModule,
     MatSidenavModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSelectModule,
+    MatDialogModule,
+    MatListModule
   ]
 })
 
